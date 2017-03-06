@@ -58,7 +58,9 @@
         <activity android:name=".swipdelete.SwipDeleteActivity" />
         <activity android:name=".rainbar.RainBarActivity" />
         <activity android:name=".asynctask.AsyncTaskActivity" />
-        <activity android:name=".xml.XmlParsePullActivity"></activity>
+        <activity android:name=".xml.XmlParsePullActivity" />
+        <activity android:name=".repeatclick.RepeatyActivity" />
+        <activity android:name=".special.SpecialViewActivity"></activity>
     </application>
 
 </manifest>

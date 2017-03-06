@@ -24,6 +24,7 @@ import com.boc.lfj.httpdemo.progress.ProgressActivity;
 import com.boc.lfj.httpdemo.rainbar.RainBarActivity;
 import com.boc.lfj.httpdemo.recycleview.RecycleViewActivity;
 import com.boc.lfj.httpdemo.refresh.RefreshActivity;
+import com.boc.lfj.httpdemo.repeatclick.RepeatyActivity;
 import com.boc.lfj.httpdemo.retrofit.NetService;
 import com.boc.lfj.httpdemo.retrofit.ServiceGenerator;
 import com.boc.lfj.httpdemo.rx.BaseSubscriber;
@@ -32,6 +33,7 @@ import com.boc.lfj.httpdemo.rx.RxServiceGenerator;
 import com.boc.lfj.httpdemo.service.MyIntentService;
 import com.boc.lfj.httpdemo.service.ServiceActivity;
 import com.boc.lfj.httpdemo.service.UndeadService;
+import com.boc.lfj.httpdemo.special.SpecialViewActivity;
 import com.boc.lfj.httpdemo.swipdelete.SwipDeleteActivity;
 import com.boc.lfj.httpdemo.xml.XmlParsePullActivity;
 
@@ -77,6 +79,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         mList.add("自定义RainBar");
         mList.add("AsyncTask");
         mList.add("XML解析");
+        mList.add("监听连续点击事件");
+        mList.add("各种定制View");
     }
 
     @Override
@@ -133,6 +137,12 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         }
         if (position == 13) {
             startActivity(new Intent(MainActivity.this, XmlParsePullActivity.class));
+        }
+        if (position == 14) {
+            startActivity(new Intent(MainActivity.this, RepeatyActivity.class));
+        }
+        if (position == 15) {
+            startActivity(new Intent(MainActivity.this, SpecialViewActivity.class));
         }
     }
 
