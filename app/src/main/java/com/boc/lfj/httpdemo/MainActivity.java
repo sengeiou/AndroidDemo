@@ -20,6 +20,7 @@ import com.boc.lfj.httpdemo.common.SPUtils;
 import com.boc.lfj.httpdemo.common.ToastUtils;
 import com.boc.lfj.httpdemo.dispatchevent.DispatchEventActivity;
 import com.boc.lfj.httpdemo.exoplayer.PlayerActivity;
+import com.boc.lfj.httpdemo.map.MapActivity;
 import com.boc.lfj.httpdemo.progress.ProgressActivity;
 import com.boc.lfj.httpdemo.rainbar.RainBarActivity;
 import com.boc.lfj.httpdemo.recycleview.RecycleViewActivity;
@@ -33,6 +34,7 @@ import com.boc.lfj.httpdemo.rx.RxServiceGenerator;
 import com.boc.lfj.httpdemo.service.MyIntentService;
 import com.boc.lfj.httpdemo.service.ServiceActivity;
 import com.boc.lfj.httpdemo.service.UndeadService;
+import com.boc.lfj.httpdemo.special.SearchViewActivity;
 import com.boc.lfj.httpdemo.special.SpecialViewActivity;
 import com.boc.lfj.httpdemo.swipdelete.SwipDeleteActivity;
 import com.boc.lfj.httpdemo.xml.XmlParsePullActivity;
@@ -81,6 +83,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         mList.add("XML解析");
         mList.add("监听连续点击事件");
         mList.add("各种定制View");
+        mList.add("百度地图");
+        mList.add("SearchView");
+
     }
 
     @Override
@@ -143,6 +148,14 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         }
         if (position == 15) {
             startActivity(new Intent(MainActivity.this, SpecialViewActivity.class));
+        }
+
+        if (position == 16) {
+            startActivity(new Intent(MainActivity.this, MapActivity.class));
+        }
+
+        if (position == 17) {
+            startActivity(new Intent(MainActivity.this, SearchViewActivity.class));
         }
     }
 
