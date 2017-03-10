@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.content.ServiceConnection;
 import android.os.Bundle;
 import android.os.IBinder;
+import android.support.design.widget.CoordinatorLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
@@ -13,6 +14,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.boc.lfj.httpdemo.asynctask.AsyncTaskActivity;
+import com.boc.lfj.httpdemo.banner.BannerActivity;
 import com.boc.lfj.httpdemo.bean.BaseResponseBean;
 import com.boc.lfj.httpdemo.bean.message.QueryMessageCriteria;
 import com.boc.lfj.httpdemo.bean.message.QueryMessageResponse;
@@ -34,6 +36,8 @@ import com.boc.lfj.httpdemo.rx.RxServiceGenerator;
 import com.boc.lfj.httpdemo.service.MyIntentService;
 import com.boc.lfj.httpdemo.service.ServiceActivity;
 import com.boc.lfj.httpdemo.service.UndeadService;
+import com.boc.lfj.httpdemo.special.CoordinatorLayoutActivity;
+import com.boc.lfj.httpdemo.special.FadeInOutActivity;
 import com.boc.lfj.httpdemo.special.SearchViewActivity;
 import com.boc.lfj.httpdemo.special.SpecialViewActivity;
 import com.boc.lfj.httpdemo.swipdelete.SwipDeleteActivity;
@@ -85,7 +89,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         mList.add("各种定制View");
         mList.add("百度地图");
         mList.add("SearchView");
-
+        mList.add("CoordinatorLayout");
+        mList.add("Fade in out");
+        mList.add("Banner");
     }
 
     @Override
@@ -156,6 +162,16 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
         if (position == 17) {
             startActivity(new Intent(MainActivity.this, SearchViewActivity.class));
+        }
+        if (position == 18) {
+            startActivity(new Intent(MainActivity.this, CoordinatorLayoutActivity.class));
+        }
+
+        if (position == 19) {
+            startActivity(new Intent(MainActivity.this, FadeInOutActivity.class));
+        }
+        if (position == 20) {
+            startActivity(new Intent(MainActivity.this, BannerActivity.class));
         }
     }
 

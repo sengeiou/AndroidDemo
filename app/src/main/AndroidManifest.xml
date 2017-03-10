@@ -82,6 +82,10 @@
                 android:name="android.app.searchable"
                 android:resource="@xml/searchable" />
         </activity>
+        <activity android:name=".special.CoordinatorLayoutActivity" />
+        <activity android:name=".special.FadeInOutActivity" />
+        <activity android:name=".banner.BannerActivity" />
+        <activity android:name=".special.ColorFulStatusBarActivity"></activity>
     </application>
 
 </manifest>
