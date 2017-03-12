@@ -23,6 +23,7 @@ import com.boc.lfj.httpdemo.common.ToastUtils;
 import com.boc.lfj.httpdemo.dispatchevent.DispatchEventActivity;
 import com.boc.lfj.httpdemo.exoplayer.PlayerActivity;
 import com.boc.lfj.httpdemo.map.MapActivity;
+import com.boc.lfj.httpdemo.news.ScrollingActivity;
 import com.boc.lfj.httpdemo.progress.ProgressActivity;
 import com.boc.lfj.httpdemo.rainbar.RainBarActivity;
 import com.boc.lfj.httpdemo.recycleview.RecycleViewActivity;
@@ -92,6 +93,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         mList.add("CoordinatorLayout");
         mList.add("Fade in out");
         mList.add("Banner");
+        mList.add("5.0新控件");
     }
 
     @Override
@@ -172,6 +174,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         }
         if (position == 20) {
             startActivity(new Intent(MainActivity.this, BannerActivity.class));
+        }
+        if (position == 21) {
+            startActivity(new Intent(MainActivity.this, ScrollingActivity.class));
         }
     }
 
