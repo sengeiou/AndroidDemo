@@ -37,6 +37,7 @@ import com.boc.lfj.httpdemo.rx.RxServiceGenerator;
 import com.boc.lfj.httpdemo.service.MyIntentService;
 import com.boc.lfj.httpdemo.service.ServiceActivity;
 import com.boc.lfj.httpdemo.service.UndeadService;
+import com.boc.lfj.httpdemo.special.ColorFulStatusBarActivity;
 import com.boc.lfj.httpdemo.special.CoordinatorLayoutActivity;
 import com.boc.lfj.httpdemo.special.FadeInOutActivity;
 import com.boc.lfj.httpdemo.special.SearchViewActivity;
@@ -94,6 +95,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         mList.add("Fade in out");
         mList.add("Banner");
         mList.add("5.0新控件");
+        mList.add("沉浸式状态栏");
     }
 
     @Override
@@ -177,6 +179,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         }
         if (position == 21) {
             startActivity(new Intent(MainActivity.this, ScrollingActivity.class));
+        }
+        if (position == 22) {
+            startActivity(new Intent(MainActivity.this, ColorFulStatusBarActivity.class));
         }
     }
 

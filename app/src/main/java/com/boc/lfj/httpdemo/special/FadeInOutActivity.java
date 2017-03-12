@@ -2,6 +2,7 @@ package com.boc.lfj.httpdemo.special;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.AbsListView;
 import android.widget.ArrayAdapter;
@@ -27,8 +28,10 @@ public class FadeInOutActivity extends AppCompatActivity {
         setContentView(R.layout.activity_fade_in_out);
         initData();
         listView = (ListView) findViewById(R.id.listview);
+        View view = LayoutInflater.from(FadeInOutActivity.this).inflate(R.layout.item_header,null);
         layout = (LinearLayout) findViewById(R.id.layout);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(FadeInOutActivity.this, android.R.layout.simple_list_item_1, mList);
+        listView.addHeaderView(view);
         listView.setAdapter(adapter);
         initListener();
     }
@@ -52,7 +55,12 @@ public class FadeInOutActivity extends AppCompatActivity {
             public void onScroll(AbsListView view, int firstVisibleItem, int visibleItemCount, int totalItemCount) {
                 Logger.d("firstVisibleItem=" + firstVisibleItem + "visibleItemCount=" + visibleItemCount + "totalItemCount=" + totalItemCount);
                 Logger.d(getScroolY() + "top=" + gettop());
-                layout.getBackground().mutate().setAlpha((int) (getAlphaFloat(Math.abs(getScroolY())) * 255));
+                if (firstVisibleItem > 0) {
+                    layout.getBackground().mutate().setAlpha(255);
+                } else {
+                    layout.getBackground().mutate().setAlpha((int) (getAlphaFloat(Math.abs(getScroolY())) * 255));
+                }
+                Logger.d(layout.getAlpha()+"");
             }
         });
 
@@ -66,7 +74,7 @@ public class FadeInOutActivity extends AppCompatActivity {
      */
     public float getAlphaFloat(int dis) {
 
-        int step = 1000;
+        int step = 450;
         if (dis == 0) {
             return 0.0f;
         }

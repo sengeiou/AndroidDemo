@@ -83,14 +83,18 @@
                 android:resource="@xml/searchable" />
         </activity>
         <activity android:name=".special.CoordinatorLayoutActivity" />
-        <activity android:name=".special.FadeInOutActivity" />
+        <activity
+            android:name=".special.FadeInOutActivity"
+            android:theme="@style/Theme.DesignDemo" />
         <activity android:name=".banner.BannerActivity" />
-        <activity android:name=".special.ColorFulStatusBarActivity" />
+        <activity android:name=".special.ColorFulStatusBarActivity"
+            android:theme="@style/Theme.DesignDemo"/>
         <activity
             android:name=".news.ScrollingActivity"
             android:label="@string/title_activity_scrolling"
             android:theme="@style/Theme.DesignDemo">
-            <meta-data android:name="android.support.PARENT_ACTIVITY"
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
     </application>
