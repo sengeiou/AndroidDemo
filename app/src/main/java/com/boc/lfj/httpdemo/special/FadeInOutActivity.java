@@ -1,5 +1,6 @@
 package com.boc.lfj.httpdemo.special;
 
+import android.support.design.widget.AppBarLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -19,7 +20,7 @@ import java.util.List;
 
 public class FadeInOutActivity extends AppCompatActivity {
     private ListView listView;
-    private LinearLayout layout;
+    private AppBarLayout layout;
     private List<String> mList = new ArrayList<>();
 
     @Override
@@ -29,7 +30,7 @@ public class FadeInOutActivity extends AppCompatActivity {
         initData();
         listView = (ListView) findViewById(R.id.listview);
         View view = LayoutInflater.from(FadeInOutActivity.this).inflate(R.layout.item_header,null);
-        layout = (LinearLayout) findViewById(R.id.layout);
+        layout = (AppBarLayout) findViewById(R.id.layout);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(FadeInOutActivity.this, android.R.layout.simple_list_item_1, mList);
         listView.addHeaderView(view);
         listView.setAdapter(adapter);
