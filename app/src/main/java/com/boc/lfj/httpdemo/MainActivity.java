@@ -24,6 +24,7 @@ import com.boc.lfj.httpdemo.dispatchevent.DispatchEventActivity;
 import com.boc.lfj.httpdemo.exoplayer.PlayerActivity;
 import com.boc.lfj.httpdemo.map.MapActivity;
 import com.boc.lfj.httpdemo.news.ScrollingActivity;
+import com.boc.lfj.httpdemo.powerrv.demo.GuideActivity;
 import com.boc.lfj.httpdemo.progress.ProgressActivity;
 import com.boc.lfj.httpdemo.rainbar.RainBarActivity;
 import com.boc.lfj.httpdemo.recycleview.RecycleViewActivity;
@@ -96,6 +97,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         mList.add("Banner");
         mList.add("5.0新控件");
         mList.add("沉浸式状态栏");
+        mList.add("PowerRecycleView");
     }
 
     @Override
@@ -182,6 +184,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         }
         if (position == 22) {
             startActivity(new Intent(MainActivity.this, ColorFulStatusBarActivity.class));
+        }
+        if (position == 23) {
+            startActivity(new Intent(MainActivity.this, GuideActivity.class));
         }
     }
 

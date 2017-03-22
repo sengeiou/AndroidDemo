@@ -37,4 +37,6 @@
     <color name="color_ff4a57">#ff4a57</color>
     <color name="color_light_blue">#14acae</color>
     <color name="gray">#4a4a4a</color>
+
+    <color name="colorSmoke">#666666</color>
 </resources>

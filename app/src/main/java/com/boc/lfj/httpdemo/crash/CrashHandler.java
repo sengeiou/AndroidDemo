@@ -173,12 +173,20 @@ public class CrashHandler implements Thread.UncaughtExceptionHandler {
             String time = formatter.format(new Date());
             String fileName = "crash-" + time + "-" + timestamp + ".log";
             if (Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)) {
-                String path = "/sdcard/crash/";
-                File dir = new File(path);
-                if (!dir.exists()) {
-                    dir.mkdirs();
+                String path = Environment.getExternalStorageDirectory().getPath()+"/crash/";
+                File file = new File(path , fileName);
+                if(!file.getParentFile().exists()) {
+                    //如果目标文件所在的目录不存在，则创建父目录
+                    System.out.println("目标文件所在目录不存在，准备创建它！");
+                    if(!file.getParentFile().mkdirs()) {
+                        System.out.println("创建目标文件所在目录失败！");
+                    }
                 }
-                FileOutputStream fos = new FileOutputStream(path + fileName);
+
+//                if (!file.exists()){
+//                    file.createNewFile();
+//                }
+                FileOutputStream fos = new FileOutputStream(file);
                 fos.write(sb.toString().getBytes());
                 fos.close();
             }

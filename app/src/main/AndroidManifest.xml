@@ -97,6 +97,32 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
+
+        <activity android:name="com.boc.lfj.httpdemo.powerrv.demo.NormalActivity"></activity>
+        <activity android:name="com.boc.lfj.httpdemo.powerrv.demo.SecondActivity"></activity>
+        <activity android:name="com.boc.lfj.httpdemo.powerrv.demo.PickActivity"></activity>
+        <activity android:name="com.boc.lfj.httpdemo.powerrv.demo.Pick2Activity"></activity>
+        <!-- <activity android:name=".rv.GuideActivity"> -->
+
+
+        <!-- </activity> -->
+        <activity android:name="com.boc.lfj.httpdemo.powerrv.demo.CustomerNormalActivity"></activity>
+
+        <!-- <activity-alias -->
+        <!-- android:name="launchActivity" -->
+        <!-- android:targetActivity=".GuideActivity"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="android.intent.action.MAIN"/> -->
+
+
+        <!-- <category android:name="android.intent.category.LAUNCHER"/> -->
+        <!-- </intent-filter> -->
+
+
+        <!-- </activity-alias> -->
+        <activity android:name="com.boc.lfj.httpdemo.powerrv.demo.GuideActivity">
+        </activity>
+        <activity android:name="com.boc.lfj.httpdemo.powerrv.demo.simple.RefreshActivity"></activity>
     </application>
 
 </manifest>
