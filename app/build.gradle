@@ -30,7 +30,7 @@ dependencies {
     compile(name: 'rxandroid-1.2.1', ext: 'aar')
     compile(name: 'exoplayer-r2.0.4', ext: 'aar')
     //    compile 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
-    //    compile 'com.ogaclejapan:rxbinding:1.2.0'
+        compile 'com.ogaclejapan:rxbinding:1.2.0'
     compile 'com.android.support:appcompat-v7:25.2.0'
     compile 'com.google.code.gson:gson:2.4'
     compile 'com.android.support:support-v4:25.2.0'

@@ -87,8 +87,9 @@
             android:name=".special.FadeInOutActivity"
             android:theme="@style/Theme.DesignDemo" />
         <activity android:name=".banner.BannerActivity" />
-        <activity android:name=".special.ColorFulStatusBarActivity"
-            android:theme="@style/Theme.DesignDemo"/>
+        <activity
+            android:name=".special.ColorFulStatusBarActivity"
+            android:theme="@style/Theme.DesignDemo" />
         <activity
             android:name=".news.ScrollingActivity"
             android:label="@string/title_activity_scrolling"
@@ -97,16 +98,15 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
-
-        <activity android:name="com.boc.lfj.httpdemo.powerrv.demo.NormalActivity"></activity>
-        <activity android:name="com.boc.lfj.httpdemo.powerrv.demo.SecondActivity"></activity>
-        <activity android:name="com.boc.lfj.httpdemo.powerrv.demo.PickActivity"></activity>
-        <activity android:name="com.boc.lfj.httpdemo.powerrv.demo.Pick2Activity"></activity>
+        <activity android:name=".powerrv.demo.NormalActivity" />
+        <activity android:name=".powerrv.demo.SecondActivity" />
+        <activity android:name=".powerrv.demo.PickActivity" />
+        <activity android:name=".powerrv.demo.Pick2Activity" />
         <!-- <activity android:name=".rv.GuideActivity"> -->
 
 
         <!-- </activity> -->
-        <activity android:name="com.boc.lfj.httpdemo.powerrv.demo.CustomerNormalActivity"></activity>
+        <activity android:name=".powerrv.demo.CustomerNormalActivity" />
 
         <!-- <activity-alias -->
         <!-- android:name="launchActivity" -->
@@ -120,9 +120,9 @@
 
 
         <!-- </activity-alias> -->
-        <activity android:name="com.boc.lfj.httpdemo.powerrv.demo.GuideActivity">
-        </activity>
-        <activity android:name="com.boc.lfj.httpdemo.powerrv.demo.simple.RefreshActivity"></activity>
+        <activity android:name=".powerrv.demo.GuideActivity"></activity>
+        <activity android:name=".powerrv.demo.simple.RefreshActivity" />
+        <activity android:name=".filtrate.FiltratetActivity"></activity>
     </application>
 
 </manifest>

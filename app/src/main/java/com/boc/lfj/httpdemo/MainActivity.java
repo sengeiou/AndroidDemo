@@ -22,6 +22,7 @@ import com.boc.lfj.httpdemo.common.SPUtils;
 import com.boc.lfj.httpdemo.common.ToastUtils;
 import com.boc.lfj.httpdemo.dispatchevent.DispatchEventActivity;
 import com.boc.lfj.httpdemo.exoplayer.PlayerActivity;
+import com.boc.lfj.httpdemo.filtrate.FiltratetActivity;
 import com.boc.lfj.httpdemo.map.MapActivity;
 import com.boc.lfj.httpdemo.news.ScrollingActivity;
 import com.boc.lfj.httpdemo.powerrv.demo.GuideActivity;
@@ -98,6 +99,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         mList.add("5.0新控件");
         mList.add("沉浸式状态栏");
         mList.add("PowerRecycleView");
+        mList.add("FiltrteDialog");
     }
 
     @Override
@@ -187,6 +189,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         }
         if (position == 23) {
             startActivity(new Intent(MainActivity.this, GuideActivity.class));
+        }
+        if (position == 24) {
+            startActivity(new Intent(MainActivity.this, FiltratetActivity.class));
         }
     }
 
